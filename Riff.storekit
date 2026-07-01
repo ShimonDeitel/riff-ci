@@ -1,0 +1,29 @@
+{
+  "identifier" : "5A0C1F00-0000-4A00-9A00-000000000001",
+  "nonRenewingSubscriptions" : [],
+  "products" : [
+    {
+      "displayPrice" : "0.99",
+      "familyShareable" : false,
+      "internalID" : "riff_pro_unlock",
+      "localizations" : [
+        {
+          "description" : "Unlimited idea riffs, every day.",
+          "displayName" : "Riff Pro",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "riff_pro_unlock",
+      "referenceName" : "Riff Pro Unlock",
+      "type" : "NonConsumable"
+    }
+  ],
+  "settings" : {
+    "_locale" : "en_US"
+  },
+  "subscriptionGroups" : [],
+  "version" : {
+    "major" : 3,
+    "minor" : 0
+  }
+}

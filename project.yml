@@ -1,0 +1,58 @@
+name: Riff
+options:
+  bundleIdPrefix: com.shimondeitel
+  deploymentTarget:
+    iOS: "17.0"
+  createIntermediateGroups: true
+  groupSortPosition: top
+settings:
+  base:
+    MARKETING_VERSION: "1.0"
+    CURRENT_PROJECT_VERSION: "1"
+    SWIFT_VERSION: "5.0"
+    DEVELOPMENT_TEAM: "W7Q885Q59C"
+    CODE_SIGN_STYLE: Automatic
+    IPHONEOS_DEPLOYMENT_TARGET: "17.0"
+    TARGETED_DEVICE_FAMILY: "1"
+    ENABLE_USER_SCRIPT_SANDBOXING: "YES"
+targets:
+  Riff:
+    type: application
+    platform: iOS
+    sources:
+      - path: Riff
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.shimondeitel.riff
+        TARGETED_DEVICE_FAMILY: "1"
+        INFOPLIST_FILE: Riff/Info.plist
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
+        ENABLE_PREVIEWS: "YES"
+        GENERATE_INFOPLIST_FILE: "NO"
+  RiffTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources:
+      - path: RiffTests
+      - path: Riff.storekit
+    dependencies:
+      - target: Riff
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.shimondeitel.riff.tests
+        GENERATE_INFOPLIST_FILE: "YES"
+        TARGETED_DEVICE_FAMILY: "1"
+schemes:
+  Riff:
+    build:
+      targets:
+        Riff: all
+        RiffTests: [test]
+    test:
+      targets:
+        - RiffTests
+    run:
+      config: Debug
+    archive:
+      config: Release
